@@ -1,0 +1,17 @@
+services:
+  mio-voice-studio:
+    build: .
+    restart: unless-stopped
+    gpus: all
+    ports:
+      - "${APP_PORT:-8787}:8787"
+    env_file:
+      - .env
+    environment:
+      APP_PORT: "8787"
+      DATA_DIR: /data
+      HF_HOME: /data/hf-cache
+      NVIDIA_VISIBLE_DEVICES: all
+      NVIDIA_DRIVER_CAPABILITIES: compute,utility
+    volumes:
+      - ./data:/data

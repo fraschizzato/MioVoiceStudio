@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mio Voice Studio</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <h1>Mio Voice Studio</h1>
+      <p>Self-hosted reference-voice TTS sessions and publishing API</p>
+    </div>
+    <span id="health" class="pill">...</span>
+  </header>
+
+  <section class="card">
+    <h2>New session</h2>
+    <label>Title<input id="title" value="New session"></label>
+    <label>Main text<textarea id="mainText" rows="12" placeholder="Paste or write the text to synthesize..."></textarea></label>
+    <label>Optional cue<textarea id="cueText" rows="3" placeholder="Short companion cue, reminder, or prompt..."></textarea></label>
+    <div class="row">
+      <button id="create">Create and generate</button>
+      <button class="secondary" id="draft">Save draft</button>
+    </div>
+    <div id="msg"></div>
+  </section>
+
+  <section class="card">
+    <details>
+      <summary>Reference voice</summary>
+      <p>Upload a WAV reference and the exact transcript spoken in that recording. The backend uses Qwen3-TTS Base in voice-cloning mode.</p>
+      <input type="file" id="voiceFile" accept="audio/wav">
+      <label>Reference transcript<textarea id="refText" rows="5" placeholder="Exact transcript of the uploaded reference audio..."></textarea></label>
+      <button id="uploadVoice">Upload reference voice</button>
+    </details>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2>Sessions</h2>
+      <button class="secondary" id="refresh">Refresh</button>
+    </div>
+    <div id="sessions"></div>
+  </section>
+</main>
+<script src="/static/app.js?v=4"></script>
+</body>
+</html>

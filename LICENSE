@@ -1,0 +1,17 @@
+PolyForm Noncommercial License 1.0.0
+
+License terms:
+https://polyformproject.org/licenses/noncommercial/1.0.0
+
+Required Notice: Copyright 2026 fraschizzato.
+Required Notice: MioVoiceStudio original project code is licensed for noncommercial purposes under the PolyForm Noncommercial License 1.0.0. Commercial use requires a separate license from the copyright holder.
+
+Scope
+-----
+This license applies only to original material in this repository for which the
+repository copyright holder is legally able to grant rights.
+
+Third-party libraries, models, runtimes, SDKs, assets, and other dependencies
+are NOT relicensed by this file. They remain subject to their own licenses,
+notices, restrictions, and attribution requirements. If a third-party license
+applies to a component, that license governs that component.

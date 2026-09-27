@@ -1,0 +1,7 @@
+fastapi==0.141.1
+uvicorn[standard]==0.40.0
+sqlalchemy==2.0.43
+pydantic==2.13.5
+python-multipart==0.0.32
+soundfile==0.14.0
+qwen-tts==0.1.1
